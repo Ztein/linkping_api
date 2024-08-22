@@ -1,0 +1,28 @@
+//localhost:8000//Responses/Topdesk_incidents_response.json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "number": "I202400123",
+  "briefDescription": "Network outage in building A",
+  "status": "firstLine",
+  "priority": "High",
+  "creationDate": "2024-08-20T09:45:00Z",
+  "modificationDate": "2024-08-20T10:00:00Z",
+  "caller": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "displayName": "John Doe"
+  },
+  "category": {
+    "name": "IT"
+  },
+  "subcategory": {
+    "name": "Network"
+  },
+  "operatorGroup": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Support Team A"
+  },
+  "location": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Building A"
+  }
+}

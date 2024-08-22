@@ -1,0 +1,22 @@
+//localhost:8000/TOPDESK_POST/incidents
+{
+  "briefDescription": "Network outage in building A",
+  "caller": {
+    "dynamicName": "John Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "123-456789",
+    "location": {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  },
+  "category": {
+    "name": "IT"
+  },
+  "priority": {
+    "name": "High"
+  },
+  "request": "The internet connection has been down for the last 2 hours.",
+  "subcategory": {
+    "name": "Network"
+  }
+}

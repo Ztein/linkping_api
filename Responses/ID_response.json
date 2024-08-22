@@ -1,0 +1,14 @@
+// localhost:8000/v1.0/users
+{
+  "displayName": "John Doe",
+  "id": "d8d54e3a-4f1d-4cfc-a5b4-5dceb648bba0",
+  "signInActivity": {
+    "lastSignInDateTime": "2024-08-20T09:45:00Z",
+    "lastSignInRequestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "riskDetail": "passwordExpired",
+    "riskLevelAggregated": "high",
+    "riskLevelDuringSignIn": "high",
+    "riskState": "confirmedSafe"
+  },
+  "userPrincipalName": "johndoe@example.com"
+}
