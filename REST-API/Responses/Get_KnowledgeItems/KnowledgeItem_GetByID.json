@@ -1,8 +1,7 @@
-//GET localhost:8000/tas/api/knowledgebase/knowledgeItems/3fa85f64-5717-4562-b3fc-2c963f66afa6
 {
   "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-  "title": "Hur ansluter jag min Windows 11-dator till skrivaren på plan 4?",
-  "content": "För att ansluta till skrivaren på plan 4, följ dessa steg...",
+  "title": "Hur ansluter jag min Windows 11-dator till skrivaren pï¿½ plan 4?",
+  "content": "Fï¿½r att ansluta till skrivaren pï¿½ plan 4, fï¿½lj dessa steg...",
   "category": "IT",
   "subcategory": "Skrivare",
   "creationDate": "2024-08-20T09:45:00Z",

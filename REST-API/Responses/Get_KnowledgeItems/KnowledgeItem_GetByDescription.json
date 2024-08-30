@@ -1,10 +1,9 @@
-//GET localhost:8000/tas/api/knowledgebase/knowledgeItems?q=hur+ansluter+jag+min+windows+11-dator+till+skrivaren+på+plan+4
 {
   "items": [
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "title": "Hur ansluter jag min Windows 11-dator till skrivaren på plan 4?",
-      "summary": "Steg-för-steg-guide för att ansluta din dator till skrivaren på plan 4.",
+      "title": "Hur ansluter jag min Windows 11-dator till skrivaren pï¿½ plan 4?",
+      "summary": "Steg-fï¿½r-steg-guide fï¿½r att ansluta din dator till skrivaren pï¿½ plan 4.",
       "category": "IT",
       "subcategory": "Skrivare",
       "author": "Support Team"

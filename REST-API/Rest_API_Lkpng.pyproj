@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Rest_API_Lkpng</Name>
     <RootNamespace>Rest_API_Lkpng</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +24,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Flask-vers.py" />
-    <Compile Include="HTTP-vers.py" />
+    <Compile Include="HTTP-vers.txt" />
+    <Compile Include="tool.py" />
+    <Compile Include="weather.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Responses\Get_KnowledgeItems\KnowledgeItem_GetByDescription.json" />
