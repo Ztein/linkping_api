@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, send_file
 import json
-import ollama
+#import ollama
 
 
 class Tools:
