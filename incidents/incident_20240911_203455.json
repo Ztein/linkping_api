@@ -1,0 +1,19 @@
+{
+    "caller": {
+        "dynamicName": "Joel Stenberg",
+        "location": {
+            "id": "Stadshuset"
+        }
+    },
+    "priority": {
+        "name": "H\u00f6g"
+    },
+    "description": "Telefonen v\u00e4grar logga p\u00e5 intran\u00e4tet. Den fungerade tidigare utan problem men nu \u00e4r det n\u00e5got som inte st\u00e4mmer.",
+    "status": "\u00d6ppen",
+    "assigned_to": "N/A",
+    "category": "\u00d6vrigt",
+    "urgency": "Medel",
+    "impact": "Medel",
+    "created_at": "2024-09-11T20:34:55.573085",
+    "updated_at": "2024-09-11T20:34:55.573100"
+}

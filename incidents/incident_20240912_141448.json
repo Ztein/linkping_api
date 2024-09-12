@@ -1,0 +1,19 @@
+{
+    "caller": {
+        "dynamicName": "Joel Stenberg",
+        "location": {
+            "id": "Hemma"
+        }
+    },
+    "priority": {
+        "name": "h\u00f6g"
+    },
+    "description": "F\u00e5r inte ig\u00e5ng n\u00e4tverket.",
+    "status": "\u00d6ppen",
+    "assigned_to": "N/A",
+    "category": "\u00d6vrigt",
+    "urgency": "Medel",
+    "impact": "Medel",
+    "created_at": "2024-09-12T14:14:48.720781",
+    "updated_at": "2024-09-12T14:14:48.720809"
+}

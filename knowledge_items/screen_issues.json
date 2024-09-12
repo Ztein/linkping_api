@@ -1,0 +1,39 @@
+{
+    "id": "screen_issues",
+    "title": "Så hjälper du en medarbetare med skärmproblem",
+    "category": "Skärmproblem",
+    "tags": ["skärm", "bildskärm", "problem", "support"],
+    "content": [
+      {
+        "problem": "Skärmen är helt svart",
+        "steps": [
+          "Kontrollera att strömkabeln är korrekt ansluten till både skärmen och strömuttaget.",
+          "Se till att strömknappen på skärmen är påslagen.",
+          "Om skärmen är ansluten via en dockningsstation eller adapter, försök att koppla direkt till datorn.",
+          "Kontrollera att datorskärmen inte är i viloläge eller vänteläge genom att röra på musen eller trycka på en tangent.",
+          "Testa att ansluta skärmen till en annan dator eller en annan skärm till den aktuella datorn för att utesluta fel på skärmen."
+        ]
+      },
+      {
+        "problem": "Fel upplösning visas på skärmen",
+        "steps": [
+          "Högerklicka på skrivbordet och välj 'Bildskärmsinställningar' (Windows) eller gå till 'Systeminställningar > Skärmar' (Mac).",
+          "Under 'Upplösning', välj rekommenderad upplösning för skärmen.",
+          "Om upplösningen fortfarande är felaktig, kontrollera att grafikkortsdrivrutinerna är uppdaterade.",
+          "Starta om datorn för att tillämpa ändringarna."
+        ]
+      },
+      {
+        "problem": "Skärmen flimrar eller visar artefakter",
+        "steps": [
+          "Kontrollera att skärmens kabel är ordentligt ansluten och inte skadad.",
+          "Prova att byta kabel om möjligt (t.ex. HDMI, DisplayPort eller VGA).",
+          "Kontrollera att grafikkortsdrivrutinerna är uppdaterade.",
+          "Testa att minska skärmens uppdateringsfrekvens via 'Bildskärmsinställningar'.",
+          "Om problemet kvarstår, prova att ansluta skärmen till en annan dator för att se om problemet kvarstår."
+        ]
+      }
+    ],
+    "created_at": "2024-09-12",
+    "updated_at": "2024-09-12"
+  }

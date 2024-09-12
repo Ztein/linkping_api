@@ -1,0 +1,19 @@
+{
+    "caller": {
+        "dynamicName": "Joel Stenberg",
+        "location": {
+            "id": "Stadshuset"
+        }
+    },
+    "priority": {
+        "name": "H\u00f6g"
+    },
+    "description": "Sk\u00e4rmen blinkar ett par g\u00e5nger och visar sedan bara svart d\u00e4r det ska vara rosa.",
+    "status": "\u00d6ppen",
+    "assigned_to": "N/A",
+    "category": "\u00d6vrigt",
+    "urgency": "Medel",
+    "impact": "Medel",
+    "created_at": "2024-09-11T20:47:12.802042",
+    "updated_at": "2024-09-11T20:47:12.802051"
+}

@@ -1,0 +1,39 @@
+{
+    "id": "network_issues",
+    "title": "Så hjälper du en medarbetare med nätverksproblem",
+    "category": "Nätverksproblem",
+    "tags": ["nätverk", "wifi", "internet", "support"],
+    "content": [
+      {
+        "problem": "Ingen internetanslutning",
+        "steps": [
+          "Kontrollera att Wi-Fi eller nätverkskabeln är korrekt ansluten.",
+          "Be medarbetaren att starta om sin router/modem genom att koppla ur den i 30 sekunder och sedan sätta i den igen.",
+          "Starta om datorn och se om anslutningen återställs.",
+          "Kontrollera om andra enheter har internetåtkomst för att avgöra om det är ett lokalt problem med datorn eller ett större nätverksproblem.",
+          "Om problemet kvarstår, be medarbetaren att försöka ansluta till ett annat nätverk (t.ex. mobilt nätverk) för att utesluta problem med internetleverantören."
+        ]
+      },
+      {
+        "problem": "Svag eller intermittent Wi-Fi-anslutning",
+        "steps": [
+          "Be medarbetaren att flytta närmare routern för att se om signalstyrkan förbättras.",
+          "Se till att inga stora fysiska hinder (som väggar eller stora metallföremål) blockerar signalen.",
+          "Rekommendera att byta till 5GHz-bandet om routern stödjer det, då det kan ge bättre prestanda på kortare avstånd.",
+          "Starta om både datorn och routern för att lösa eventuella tillfälliga problem.",
+          "Uppdatera nätverkskortets drivrutiner och se om det förbättrar anslutningen."
+        ]
+      },
+      {
+        "problem": "Datorn får inte en IP-adress",
+        "steps": [
+          "Be medarbetaren att köra felsökningsverktyget för nätverk (Windows: 'Nätverksfelsökare', Mac: 'Diagnosverktyg').",
+          "Kontrollera att DHCP-servern på routern är aktiverad, och att datorn är inställd på att ta emot en IP-adress automatiskt.",
+          "Öppna kommandotolken (Windows) eller terminalen (Mac) och kör följande kommando för att uppdatera IP-konfigurationen: `ipconfig /release` och sedan `ipconfig /renew` (Windows) eller `sudo ifconfig en0 down; sudo ifconfig en0 up` (Mac).",
+          "Om problemet kvarstår, be medarbetaren att testa med en statisk IP-adress och se om anslutningen fungerar."
+        ]
+      }
+    ],
+    "created_at": "2024-09-12",
+    "updated_at": "2024-09-12"
+  }

@@ -1,0 +1,13 @@
+{
+    "displayName": "Joel Stenberg",
+    "id": "e2c3ec5a-b239-48dc-9ec5-227a83a70197",
+    "signInActivity": {
+        "lastSignInDateTime": "2024-09-12T09:04:22.479511",
+        "lastSignInRequestId": "2e8f307b-92ac-4c2d-8c81-c9d4d75ccc26",
+        "riskDetail": "passwordExpired",
+        "riskLevelAggregated": "high",
+        "riskLevelDuringSignIn": "high",
+        "riskState": "confirmedSafe"
+    },
+    "userPrincipalName": "unknown@example.com"
+}
