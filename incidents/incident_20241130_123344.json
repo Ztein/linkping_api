@@ -1,0 +1,19 @@
+{
+    "caller": {
+        "dynamicName": "Joel",
+        "location": {
+            "id": "Biblioteket"
+        }
+    },
+    "priority": {
+        "name": "Normal"
+    },
+    "description": "Svart sk\u00e4rm. Sk\u00e4rmen \u00e4r helt svart trots att den \u00e4r p\u00e5slagen och korrekt ansluten.",
+    "status": "\u00d6ppen",
+    "assigned_to": "N/A",
+    "category": "Sk\u00e4rmproblem",
+    "urgency": "Medium",
+    "impact": "L\u00e5g",
+    "created_at": "2024-11-30T12:33:44.378012",
+    "updated_at": "2024-11-30T12:33:44.378022"
+}

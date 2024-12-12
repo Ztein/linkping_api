@@ -1,0 +1,19 @@
+{
+    "caller": {
+        "dynamicName": "Joel Stenberg",
+        "location": {
+            "id": "hemma"
+        }
+    },
+    "priority": {
+        "name": "H\u00f6g"
+    },
+    "description": "Internet fungerar d\u00e5ligt och l\u00e5ngsamt, vilket hindrar arbete.",
+    "status": "\u00d6ppen",
+    "assigned_to": "N/A",
+    "category": "\u00d6vrigt",
+    "urgency": "Medel",
+    "impact": "Medel",
+    "created_at": "2024-09-12T15:17:12.213871",
+    "updated_at": "2024-09-12T15:17:12.213886"
+}
