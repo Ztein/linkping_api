@@ -6,7 +6,7 @@ import uuid
 import pathlib
 
 def user_exists(user_id):
-    return os.path.exists(f'./users/{user_id}.json')
+    return (Tools.USERS_DIR / f"{user_id}.json").exists()
 
     
 def create_user_profile(user_id, user_data):
@@ -21,11 +21,11 @@ def create_user_profile(user_id, user_data):
                 "riskLevelDuringSignIn": "high",
                 "riskState": "confirmedSafe"
             },
-            "userPrincipalName": user_data.get('email', 'unknown@example.com')  # Assuming email is part of the data
+            "userPrincipalName": user_data.get('email', 'unknown@example.com')
         }
 
         # Save the user profile to a file
-        with open(f'./users/{user_id}.json', 'w') as f:
+        with open(Tools.USERS_DIR / f"{user_id}.json", 'w') as f:
             json.dump(user_profile, f, indent=4)
 
 def get_fake_incident(caller_id, dynamic_name):
@@ -110,7 +110,7 @@ class Tools:
         }
 
         # Save the JSON data to a file in /incidents directory
-        incident_filename = f"./incidents/incident_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        incident_filename = Tools.INCIDENTS_DIR / f"incident_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(incident_filename, 'w') as f:
             json.dump(data, f, indent=4)
 
@@ -118,11 +118,11 @@ class Tools:
 
     @app.route('/TOPDESK_POST/incidents', methods=['GET'])
     def handle_get_all_incidents():
-        incident_files = [f for f in os.listdir('./incidents') if f.endswith('.json')]
+        incident_files = [f for f in os.listdir(Tools.INCIDENTS_DIR) if f.endswith('.json')]
         incidents = []
 
         for incident_file in incident_files:
-            with open(f'./incidents/{incident_file}', 'r') as f:
+            with open(Tools.INCIDENTS_DIR / incident_file, 'r') as f:
                 incident = json.load(f)
                 incidents.append(incident)
 
@@ -134,11 +134,11 @@ class Tools:
     # Handle GET requests for all users
     @app.route('/v1.0/users', methods=['GET'])
     def handle_get_users():
-        user_files = [f for f in os.listdir('./users') if f.endswith('.json')]
+        user_files = [f for f in os.listdir(Tools.USERS_DIR) if f.endswith('.json')]
         users = []
 
         for user_file in user_files:
-            with open(f'./users/{user_file}', 'r') as f:
+            with open(Tools.USERS_DIR / user_file, 'r') as f:
                 user_data = json.load(f)
                 users.append(user_data)
 
@@ -176,23 +176,21 @@ class Tools:
 
     @app.route('/TOPDESK_POST/incidents/name/<dynamic_name>', methods=['GET'])
     def handle_get_incidents_by_name(dynamic_name):
-        incident_files = [f for f in os.listdir('./incidents') if f.endswith('.json')]
+        incident_files = [f for f in os.listdir(Tools.INCIDENTS_DIR) if f.endswith('.json')]
         incidents = []
 
-        # If there are no incident files, return a fabricated incident for the specific dynamicName
+        # If there are no incident files, return a fabricated incident
         if not incident_files:
-            fabricated_incident = fabricated_incident = get_fake_incident(caller_id='John Doe', dynamic_name='John Doe')
+            fabricated_incident = get_fake_incident(caller_id='John Doe', dynamic_name='John Doe')
             return jsonify([fabricated_incident]), 200
 
         # Read all incident files and filter by caller dynamicName
         for incident_file in incident_files:
-            with open(f'./incidents/{incident_file}', 'r') as f:
+            with open(Tools.INCIDENTS_DIR / incident_file, 'r') as f:
                 incident = json.load(f)
-                # Check if the incident's caller dynamicName matches the requested dynamic name
                 if incident.get('caller', {}).get('dynamicName') == dynamic_name:
                     incidents.append(incident)
 
-        # If no incidents are found for the given dynamicName, return a message
         if not incidents:
             return jsonify({"message": f"No incidents found for caller dynamicName {dynamic_name}"}), 404
 
@@ -201,15 +199,15 @@ class Tools:
     # Handle GET request for a specific knowledge item by ID
     @app.route('/knowledgeItems/<knowledge_item_id>', methods=['GET'])
     def get_knowledge_item_by_id(knowledge_item_id):
-        file_path = f'./knowledge_items/{knowledge_item_id}.json'
+        file_path = Tools.KNOWLEDGE_ITEMS_DIR / f"{knowledge_item_id}.json"
         
         # Check if the knowledge item exists
-        if os.path.exists(file_path):
+        if file_path.exists():
             with open(file_path, 'r') as f:
                 knowledge_item = json.load(f)
                 return jsonify(knowledge_item), 200
-        else:
-            return jsonify({"message": f"Knowledge item with ID {knowledge_item_id} not found"}), 404
+        
+        return jsonify({"message": f"Knowledge item with ID {knowledge_item_id} not found"}), 404
 
     # Handle GET request for all knowledge items
     @app.route('/knowledgeItems', methods=['GET'])
