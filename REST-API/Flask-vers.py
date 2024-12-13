@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, send_file
 import json
 import os
 import uuid
+import pathlib
 
 def user_exists(user_id):
     return os.path.exists(f'./users/{user_id}.json')
@@ -51,19 +52,19 @@ def get_fake_incident(caller_id, dynamic_name):
 class Tools:
 
     app = Flask(__name__)
-
-    # Ensure the incidents directory exists
-    if not os.path.exists('./incidents'):
-        os.makedirs('./incidents')
-
-    # Ensure the users directory exists
-    if not os.path.exists('./users'):
-        os.makedirs('./users')
-
-    # Ensure the knowledge_items directory exists
-    if not os.path.exists('./knowledge_items'):
-        os.makedirs('./knowledge_items')
     
+    # Get the base directory where the script is located
+    BASE_DIR = pathlib.Path(__file__).parent.parent
+    
+    # Create directories using absolute paths
+    INCIDENTS_DIR = BASE_DIR / 'incidents'
+    USERS_DIR = BASE_DIR / 'users'
+    KNOWLEDGE_ITEMS_DIR = BASE_DIR / 'knowledge_items'
+
+    # Ensure directories exist
+    INCIDENTS_DIR.mkdir(exist_ok=True)
+    USERS_DIR.mkdir(exist_ok=True)
+    KNOWLEDGE_ITEMS_DIR.mkdir(exist_ok=True)
 
     # Handle POST requests for TOPDESK incidents
     @app.route('/TOPDESK_POST/incidents', methods=['POST'])
@@ -213,11 +214,11 @@ class Tools:
     # Handle GET request for all knowledge items
     @app.route('/knowledgeItems', methods=['GET'])
     def get_knowledge_items():
-        knowledge_files = [f for f in os.listdir('./knowledge_items') if f.endswith('.json')]
+        knowledge_files = [f for f in os.listdir(Tools.KNOWLEDGE_ITEMS_DIR) if f.endswith('.json')]
         knowledge_items = []
 
         for knowledge_file in knowledge_files:
-            with open(f'./knowledge_items/{knowledge_file}', 'r') as f:
+            with open(Tools.KNOWLEDGE_ITEMS_DIR / knowledge_file, 'r') as f:
                 knowledge_item = json.load(f)
                 knowledge_items.append(knowledge_item)
 
@@ -241,5 +242,17 @@ class Tools:
     def handle_404(path):
         return "Error 404: Not Found", 404
 
-    if __name__ == '__main__':
-        app.run(host='0.0.0.0', port=8000)
+# Move test function outside the class
+def test_get_knowledge_items():
+    # Create a test client
+    with Tools.app.test_client() as client:
+        # Make a GET request to the endpoint
+        response = client.get('/knowledgeItems')
+        
+        # Print the response data
+        print(f"Status Code: {response.status_code}")
+        print(f"Response Data: {response.get_json()}")
+
+if __name__ == '__main__':
+    test_get_knowledge_items()
+    Tools.app.run(host='0.0.0.0', port=8000)

@@ -364,4 +364,5 @@ FodyWeavers.xsd
 /REST-API/env
 
 /venv/
+.DS_Store
 
