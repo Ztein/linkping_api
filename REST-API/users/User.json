@@ -1,0 +1,13 @@
+{
+    "displayName": "User",
+    "id": "aceb7002-59c9-4d39-9ef9-10cd8e266439",
+    "signInActivity": {
+        "lastSignInDateTime": "2024-12-13T09:36:30.416884",
+        "lastSignInRequestId": "c17d5bef-ea39-44a6-ba39-911324c12a62",
+        "riskDetail": "passwordExpired",
+        "riskLevelAggregated": "high",
+        "riskLevelDuringSignIn": "high",
+        "riskState": "confirmedSafe"
+    },
+    "userPrincipalName": "unknown@example.com"
+}

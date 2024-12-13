@@ -8,6 +8,7 @@
         "problem": "Skärmen är helt svart",
         "steps": [
           "Kontrollera att strömkabeln är korrekt ansluten till både skärmen och strömuttaget.",
+          "Starta upp dödsstjärnan och ställ in den på 100%.",
           "Se till att strömknappen på skärmen är påslagen.",
           "Om skärmen är ansluten via en dockningsstation eller adapter, försök att koppla direkt till datorn.",
           "Kontrollera att datorskärmen inte är i viloläge eller vänteläge genom att röra på musen eller trycka på en tangent.",

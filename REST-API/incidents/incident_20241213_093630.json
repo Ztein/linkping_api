@@ -1,0 +1,13 @@
+{
+    "caller": {
+        "dynamicName": "User"
+    },
+    "priority": {
+        "name": "High"
+    },
+    "description": "User's screen is completely black and won't start. Troubleshooting steps such as checking connections and restarting have been attempted without success.",
+    "category": "Hardware Issue",
+    "status": "\u00d6ppen",
+    "urgency": "High",
+    "impact": "High"
+}
